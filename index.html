@@ -33,13 +33,12 @@
   <img src="zenix.jpg" alt="Toyota Zenix hitam" width="1200" height="754">
   <div class="name">Toyota Zenix</div>
   <div class="timer" id="timer">00<span>:</span>00<span>:</span>00</div>
-  <div class="eta" id="eta">Tiba pukul 15.00 WIB</div>
+  <div class="eta" id="eta">Tiba pukul 16.00 WIB</div>
   <div class="credit">Foto: オーバードライブ83 / <a href="https://commons.wikimedia.org/wiki/File:2022_Toyota_Kijang_Innova_Zenix_2.0_V_MAGA10R_(20230709).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></div>
 
 <script>
-  // Arrival 15:00 WIB = 08:00 UTC. Override with ?at=YYYY-MM-DDTHH:MM (WIB) for testing.
-  const at = new URLSearchParams(location.search).get('at');
-  const target = (at && Date.parse(at + ':00+07:00')) || Date.UTC(2026, 9, 15, 8, 0, 0);
+  // Arrival 16:00 WIB = 09:00 UTC.
+  const target = Date.UTC(2026, 9, 15, 9, 0, 0);
   const timer = document.getElementById('timer');
   const pad = n => String(n).padStart(2, '0');
   const sep = '<span>:</span>';
